@@ -216,18 +216,17 @@
   </div>
 </form> -->
 
-<div class="custom-form bg-white shadow-lg my-5 w-75 mx-auto">
+<div class="container-fluid bg-white shadow-lg my-5 w-75 mx-auto">
   <form
     [formGroup]="userRegisterForm"
-    class="custom-form consulting-form"
+    class="container-fluid py-5 consulting-form"
     (ngSubmit)="onSubmit()"
   >
-    <div class="consulting-form-body">
-      <div class="row">
+    <div class="container pb-3">
         <div class="col-12">
           <div class="row">
             <!-- firstName input -->
-            <div class="col-md-12">
+            <div class="col-md-6">
               <label for="firstName">First Name</label>
               <input
                 type="text"
@@ -235,12 +234,65 @@
                 name="firstName"
                 placeholder="Enter First Name"
                 formControlName="firstName"
-                class="form-control"
+                class="form-control p-4"
               />
             </div>
             <!-- BE VALIDATION -->
+            <!-- <div
+              class="ms-5 col-md-6"
+              *ngIf="this.missingFeildsErrosObject?.hasOwnProperty('FirstName')"
+            >
+              <div
+                *ngFor="
+                  let missingFieldErrorItem of missingFeildsErrosObject[
+                    'FirstName'
+                  ]
+                "
+                class="alert alert-danger"
+              >
+                <div>
+                  {{ missingFieldErrorItem }}
+                </div>
+              </div>
+            </div>
+            FE VALIDATION 
+            <div class="col-md-5" *ngIf="this.firstNameFEValidation">
+              <div class="alert alert-danger">
+                <div *ngIf="userRegisterForm.controls['firstName'].errors">
+                  <div
+                    *ngIf="
+                      userRegisterForm.controls['firstName'].hasError(
+                        'required'
+                      )
+                    "
+                  >
+                    first name is required
+                  </div>
+                  <div
+                    *ngIf="
+                      userRegisterForm.controls['firstName'].hasError('pattern')
+                    "
+                  >
+                    first name must contain only letters
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- last name input -->
+            <div class="col-md-6">
+              <label for="lastName">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Enter Last Name"
+                formControlName="lastName"
+                class="form-control p-4"
+              />
+            </div>
             <div
-              class="col-md-12"
+              class="ms-5 col-md-6"
               *ngIf="this.missingFeildsErrosObject?.hasOwnProperty('FirstName')"
             >
               <div
@@ -257,7 +309,7 @@
               </div>
             </div>
             <!-- FE VALIDATION -->
-            <div class="col-md-12" *ngIf="this.firstNameFEValidation">
+            <div class="col-md-5 me-5" *ngIf="this.firstNameFEValidation">
               <div class="alert alert-danger">
                 <div *ngIf="userRegisterForm.controls['firstName'].errors">
                   <div
@@ -280,19 +332,7 @@
               </div>
             </div>
 
-            <!-- last name input -->
-            <div class="col-md-12">
-              <label for="lastName">Last Name</label>
-              <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                placeholder="Enter Last Name"
-                formControlName="lastName"
-                class="form-control"
-              />
-            </div>
-            <div class="col-md-12" *ngIf="this.lastNameFEValidation">
+            <div class="col-md-5 ms-5" *ngIf="this.lastNameFEValidation">
               <div class="alert alert-danger" *ngIf="this.lastNameFEValidation">
                 <div *ngIf="this.lastNameFEValidation">
                   <div
@@ -436,9 +476,8 @@
         </div>
 
         <div class="col-lg-12 text-center">
-          <button type="submit" class="form-control">Register</button>
+          <button type="submit" class="form-control rounded my-2 btn btn-primary">Register</button>
         </div>
       </div>
-    </div>
   </form>
 </div>
