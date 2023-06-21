@@ -8,7 +8,7 @@
                   <div [ngClass]="{'d-none d-md-block' : isUpdateNameActive}" class="col-7 order-1 col-md-3">
                     <span class="titel">Name: </span>
                   </div>
-                  <div class="col-12 order-3  order-md-2  col-md-8">
+                  <div class="col-12 order-3  order-md-2  col-md-7">
                       <p  *ngIf="!isUpdateNameActive">{{user.firstName +" "+user.lastName}}</p>
                       <div *ngIf="isUpdateNameActive">
                                       <form [formGroup]="nameForm"  class="row">
@@ -36,7 +36,7 @@
                                       
                                   </div>         
                   </div>
-                  <div class="col-3 order-2  order-md-3 col-md-1  ">
+                  <div class="col-3 order-2  order-md-3 col-md-2  ">
                     <div class="col-6" ></div>
                       <div *ngIf="!isUpdateNameActive" class="edit" (click)="UpdateActive('name')">Edit</div>
               
@@ -47,7 +47,7 @@
                   <div class="col-7 order-1 col-md-3">
                       <span  [ngClass]="{'d-none d-md-block' : isUpdateUserNameActive}" class="titel">UserName </span>        
                   </div>
-                  <div class="col-12 order-3  order-md-2  col-md-8">
+                  <div class="col-12 order-3  order-md-2  col-md-7">
                       <p *ngIf="!isUpdateUserNameActive" class="col-6"> {{user.userName}}</p>
                       <div *ngIf="isUpdateUserNameActive">
                                       <form [formGroup]="userNameForm" >
@@ -64,7 +64,7 @@
                                         </div>
                                   </div>         
                   </div>
-                  <div class="col-3 order-2  order-md-3 col-md-1 ">
+                  <div class="col-3 order-2  order-md-3 col-md-2 ">
                       <span *ngIf="!isUpdateUserNameActive" class="col-1 edit" (click)="UpdateActive('userName')">Edit</span>
                   </div>
                 </div>
@@ -73,7 +73,7 @@
                   <div class="col-7 order-1 col-md-3">
                       <span [ngClass]="{'d-none d-md-block' : isUpdateEmailActive}" class="titel">Email: </span>
                   </div>
-                  <div class="col-12 order-3  order-md-2  col-md-8">
+                  <div class="col-12 order-3  order-md-2  col-md-7">
                       <p *ngIf="!isUpdateEmailActive"> {{user.email}}</p>
                       <div *ngIf="isUpdateEmailActive">
                           <form [formGroup]="emailForm" (ngSubmit)="UpdateEmail()">
@@ -91,7 +91,7 @@
                           </form>             
                       </div>         
                   </div>
-                  <div class="col-3 order-2  order-md-3 col-md-1">
+                  <div class="col-3 order-2  order-md-3 col-md-2">
                       <span *ngIf="!isUpdateEmailActive" class="col-1 edit" (click)="UpdateActive('email')">Edit</span>
                   </div>
                 </div>
@@ -101,7 +101,7 @@
                     <span [ngClass]="{'d-none d-md-block' : isUpdatePhoneActive}" class="titel">Phone: </span>
 
                   </div>
-                  <div class="col-12 order-3  order-md-2  col-md-8">
+                  <div class="col-12 order-3  order-md-2  col-md-7">
                       <p *ngIf="!isUpdatePhoneActive" > {{user.phoneNumber}}</p>
                       <div *ngIf="isUpdatePhoneActive">
                           <form [formGroup]="phoneForm" >
@@ -118,7 +118,7 @@
                           </div>
                       </div>         
                   </div>
-                  <div class="col-3 order-2  order-md-3 col-md-1">
+                  <div class="col-3 order-2  order-md-3 col-md-2">
                       <span *ngIf="!isUpdatePhoneActive" class="col-1 edit" (click)="UpdateActive('phone')">Edit</span>
                   </div>
                 </div>
@@ -127,7 +127,7 @@
                   <div class="col-7 order-1 col-md-3">
                     <span [ngClass]="{'d-none d-md-block' : isUpdateAddressActive}" class="titel">Address: </span>
                   </div>
-                  <div class="col-12 order-3  order-md-2  col-md-8">
+                  <div class="col-12 order-3  order-md-2  col-md-7">
                       <p *ngIf="!isUpdateAddressActive" class="col-6"> {{user.address}}</p>
                       <div *ngIf="isUpdateAddressActive">
                           <form [formGroup]="addressForm" >
@@ -143,7 +143,7 @@
                               </div>                          
                       </div>
                   </div>
-                  <div class="col-3 order-2  order-md-3 col-md-1">
+                  <div class="col-3 order-2  order-md-3 col-md-2">
                       <span *ngIf="!isUpdateAddressActive" class="col-1 edit" (click)="UpdateActive('address')">Edit</span>
                   </div>
                 </div>
