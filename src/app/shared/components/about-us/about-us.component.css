@@ -1,0 +1,43 @@
+
+/*---------------------------------------
+  ABOUT
+-----------------------------------------*/
+.about-image,
+.gallery-image {
+  border-radius: var(--border-radius-medium);
+}
+
+.team-info {
+  background: var(--white-color);
+  border-radius: var(--border-radius-medium);
+  position: relative;
+  padding: 30px;
+}
+
+.team-info p {
+  margin-bottom: 0;
+}
+
+.team-info::before {
+  content: "";
+  display: block;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-right: 20px solid var(--white-color);
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  position: absolute;
+  left: -20px;
+  top: 0;
+  bottom: 0;
+}
+
+.gallery-image {
+  transition: all 0.3s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.02);
+}
+
