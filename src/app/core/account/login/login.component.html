@@ -55,10 +55,9 @@
                                           
                                             <form [formGroup]="loginFormGroup"
                                               (ngSubmit)="onSubmit()">
-    
                                                 <div class="d-flex align-items-center mb-3 pb-1">
-                                                    <i class="fa fa-solid fa-car fa-2x" style="color: #ff6219; font-size: 60px;"></i>
-                                                    <span class="h1 fw-bold mb-0">Cars Rent</span>
+                                                   <!----<i class="fa fa-2x" style="color: #ff6219; font-size: 60px;"></i> -->
+                                                    <span class="h1 fw-bold mb-0">ROYAL CARS</span>
                                                 </div>
     
                                                 <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account
@@ -66,7 +65,7 @@
     
                                                 <div class="form-outline mb-4">
                                                     <label class="form-label" for="email">Email</label>
-                                                    <input type="email" formControlName="email" id="email" placeholder="Enter your email" name="email" class="form-control form-control-lg"/>
+                                                    <input type="email" formControlName="email" id="email" placeholder="Enter your email" name="email" class="form-control form-control-lg rounded"/>
                                                     <div
                                                     class="col-md-12 mb-2"
                                                     *ngIf="this.missingFeildsErrosObject?.hasOwnProperty('Email')"
@@ -104,7 +103,7 @@
     
                                                 <div class="form-outline mb-4">
                                                     <label class="form-label" for="password">Password</label>
-                                                    <input placeholder="Enter your Password" type="password" formControlName="password" id="password" name="password" class="form-control form-control-lg" />
+                                                    <input placeholder="Enter your Password" type="password" formControlName="password" id="password" name="password" class="form-control form-control-lg rounded" />
                                                     <div
                                                     class="col-md-12"
                                                     *ngIf="this.missingFeildsErrosObject?.hasOwnProperty('Password')"
@@ -154,7 +153,7 @@
                                                                                       </div> 
     
                                                 <div class="pt-1 mb-4">
-                                                    <button class="btn btn-dark btn-lg btn-block my-2" type="submit">Login</button>
+                                                    <button class="btn btn-primary btn-lg btn-block my-2 rounded" type="submit">Login</button>
                                                 </div>
     
                                                 <a class="small mb-5 text-muted" href='/forgetPassword'>Forgot password?</a>
@@ -175,139 +174,3 @@
     </body>
     
     </html>
-
-
-<!-- 
-<section class="contact-section spad">
-  <div class="container">
-    
-
-      
-      <div class="custom-form bg-white shadow-lg my-5 w-75 mx-auto">
-        <form
-          class="custom-form consulting-form"
-          [formGroup]="loginFormGroup"
-          (ngSubmit)="onSubmit()"
-        >
-          <div class="row">
-            <div class="col-lg-12">
-              <input
-                id="email"
-                type="text"
-                placeholder="Enter your email"
-                formControlName="email"
-                class="form-control p-4 mb-3"
-              />
-            </div>
-            <div
-              class="col-md-12 mb-2"
-              *ngIf="this.missingFeildsErrosObject?.hasOwnProperty('Email')"
-            >
-              <div
-                *ngFor="
-                  let missingFieldErrorItem of missingFeildsErrosObject['Email']
-                "
-                class="alert alert-danger"
-              >
-                <div>
-                  {{ missingFieldErrorItem }}
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12" *ngIf="this.emailFEValidation|| false">
-              <div class="alert alert-danger" *ngIf="this.emailFEValidation" >
-                <div >
-                  <div
-                    *ngIf="
-                      loginFormGroup.controls['email'].hasError('required')
-                    "
-                  >
-                    email is required
-                  </div>
-                  <div
-                    *ngIf="loginFormGroup.controls['email'].hasError('pattern')"
-                  >
-                    email must be in the folowing format example@example.com
-                  </div>
-                </div>
-              </div>
-            </div>
-
-           
-            <div class="col-lg-12">
-              <input
-                type="password"
-                placeholder="Enter your Password"
-                formControlName="password"
-                class="form-control p-4 mb-3"
-
-              />
-            </div>
-            <div
-              class="col-md-12"
-              *ngIf="this.missingFeildsErrosObject?.hasOwnProperty('Password')"
-            >
-              <div
-                *ngFor="
-                  let missingFieldErrorItem of missingFeildsErrosObject[
-                    'Password'
-                  ]
-                "
-                class="alert alert-danger"
-              >
-                <div>
-                  {{ missingFieldErrorItem }}
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-12" *ngIf="this.passwordFEValidation">
-              <div class="alert alert-danger"
-
-              >
-                <div *ngIf="this.passwordFEValidation">
-                  <div
-                    *ngIf="
-                      loginFormGroup.controls['password'].hasError('required')
-                    "
-                  >
-                    password is required
-                  </div>
-                  <!-- <div
-                    *ngIf="
-                      loginFormGroup.controls['password'].hasError('pattern')
-                    "
-                  >
-                    password must be in the folowing format
-                    <ul class="ps-4">
-                      <li>At least one upper case English letter</li>
-                      <li>At least one lower case English letter</li>
-                      <li>At least one digit</li>
-                      <li>At least one special character</li>
-                    </ul>
-                  </div> -->
-                <!-- </div>
-              </div>
-            </div>
-
-
-            <div class="col-lg-12">
-              <button type="submit" class="w-100 mb-3 btn btn-primary py-3 px-5" style="border-radius: 0.9rem;">Login</button>
-            </div>
-
-            <div class="d-flex justify-content-end align-items-center my-2">
-              <a class="text-decoration-underline text-dark fs-6 "
-                href='/forgetPassword'
-              >
-                Forgot your password?
-              </a>
-            </div>
-          </div>
-        </form>
-      
-        </div>
-
-      
-   
-  </div>
-</section> --> -->
